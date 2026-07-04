@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLIPKART CLONE</title>
+    <link rel="stylesheet" href="https:cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>   
+</head>
+<body>
+ <div class="login-overlay" id="loginOverlay">
+        <div class="login-modal">
+            <button class="login-close" id="loginClose">&times;</button>
+            <div class="login-left">
+                <h2>Login</h2>
+                <p>Get access to your Orders, Wishlist and Recommendations</p>
+                <img src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/login_img_c4a81e.png" alt="Login">
+            </div>
+            <div class="login-right">
+                <form id="loginForm">
+                    <input type="text" placeholder="Enter Email/Mobile number" required>
+                    <input type="password" placeholder="Enter Password" required>
+                    <button type="submit" class="login-submit">Login</button>
+                    <p class="login-signup">New to Flipkart? <a href="#">Create an account</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+ 
+    <header class="fk-header">
+    <div class="fk-container header-grid">
+      <div class="logo-area">
+        <a href="index.html" class="fk-logo">
+            <img src="Flipkartlogo.jpg" alt="flipkart logo" class="logo">
+            </a>
+        </div>
+            <span class="logo-text">FLIPKART clone</span>
+            <span class="logo-plus">+</span>
+            <span class="logo-tagline">Explore<span class="plus-icon">+</span>plus</span>
+        <div class="search-area">
+            <div class="search-wrapper">
+            <i class="fas fa-search  search-icon"></i>
+            <input type="text" class="search-input" placeholder="search for products,brands or more" aria-label="Search"/>
+            </div>
+        </div>
+       <div class="actions-area">
+        <button class="btn-login" id="loginbtn"<i class="fas fa-user-circle"></i>Login</button>
+        <a href="/seller-registration" class="action-link desktop-only">
+                    <i class="fas fa-store"></i> Become a Seller
+                </a>
+                
+                <!-- More Options - Usually opens dropdown menu -->
+                <a href="/account" class="action-link desktop-only" id="moreBtn">
+                    <i class="fas fa-ellipsis-v"></i>
+                </a>
+                
+                <!-- Cart - Shopping Cart Page -->
+                <a href="/cart" class="action-link cart-link">
+                    <i class="fas fa-shopping-cart"></i> <span class="cart-text">Cart</span>
+                </a>
+    </div>
+    </div>
+ </header>   
+
+ <nav class="fk-nav" aria-label="Categories">
+    <div class="fk-container">
+        <div class="nav-grid">  <!-- ← ADD THIS WRAPPER -->
+            <a href="/category/mobiles" class="nav-item"><i class="fas fa-mobile-alt"></i> <span>Mobiles</span></a>
+            <a href="/category/electronics" class="nav-item"><i class="fas fa-laptop"></i> <span>Electronics</span></a>
+            <a href="/category/fashion" class="nav-item"><i class="fas fa-tshirt"></i> <span>Fashion</span></a>
+            <a href="/category/home-furniture" class="nav-item"><i class="fas fa-couch"></i> <span>Home</span></a>
+            <a href="/category/books" class="nav-item"><i class="fas fa-book"></i> <span>Books</span></a>
+            <a href="/category/gaming" class="nav-item"><i class="fas fa-gamepad"></i> <span>Gaming</span></a>
+            <a href="/category/automotive" class="nav-item"><i class="fas fa-car"></i> <span>Auto</span></a>
+            <a href="/offers" class="nav-item"><i class="fas fa-gift"></i> <span>Offers</span></a>
+        </div>  <!-- ← CLOSE THE WRAPPER -->
+    </div>
+</nav>
+
+        <section class="banner-section">
+    <div class="fk-container banner-slider" id="bannerSlider">
+        <!-- Slide 1 -->
+        <div class="banner-slide active" data-index="0">
+            <img src="flipkart-big-billion-days-sale.jpg" alt="Big Billion Days" class="banner-img">
+            <div class="banner-text">Big Billion Days · <span class="highlight">Up to 80% off</span></div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="banner-slide" data-index="1">
+            <img src="bannerimage.jpg" alt="GOAT SALE" class="banner-img">
+            <div class="banner-text">GOAT SALE · <span class="highlight">Up to 10% off</span></div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="banner-slide" data-index="2">
+            <img src="bannerimage2.jpg" alt="SALE LIVE" class="banner-img">
+            <div class="banner-text">SALE IS LIVE · <span class="highlight">Up to 60% off</span></div>
+        </div>
+        <!-- Navigation Buttons -->
+        <button class="slider-btn prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <!-- Dots -->
+    <div class="slider-dots" id="sliderDots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+    </div>
+</section>
+        
+
+    
+    <section class="products-section">
+        <div class="fk-container">
+            <div class="section-header">
+                <h2>🔥 Top Deals</h2>
+                <a href="/all-products" class="view-all">View all <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="product-grid" id="productGrid">
+                <!-- Products injected by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+   
+    <footer class="fk-footer">
+        <div class="fk-container footer-grid">
+            <div class="footer-col">
+                <h4>About</h4>
+                <a href="/about/contact">Contact Us</a>
+                <a href="/about">About Us</a>
+                <a href="/careers">Careers</a>
+            </div>
+            <div class="footer-col">
+                <h4>Help</h4>
+                <a href="/help/payments">Payments</a>
+                <a href="/help/shipping">Shipping</a>
+                <a href="/help/returns">Returns</a>
+            </div>
+            <div class="footer-col">
+                <h4>Social</h4>
+                <a href="https://facebook.com/flipkart" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://twitter.com/flipkart" target="_blank" rel="noopener"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="https://instagram.com/flipkart" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+            <div class="footer-col">
+                <h4>Mail Us</h4>
+                <address>Flipkart Internet Pvt Ltd<br />Bengaluru, India</address>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Flipkart clone · Responsive frontend demo</span>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
